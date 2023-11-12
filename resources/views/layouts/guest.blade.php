@@ -15,12 +15,12 @@
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
     <body class="font-sans text-gray-900 antialiased ">
-        <div class="min-h-screen flex flex-col sm:justify-center pt-6 sm:pt-0 bg-[#4E9F3D]">
-            <div class="w-full sm:max-w-md mt-6 px-6 py-3 pt-6 ms-16 bg-white shadow-md overflow-hidden sm:rounded-lg">
+        <div class="min-h-screen flex flex-col sm:justify-center pt-6 sm:pt-0 bg-[#ffffff]">
+            <div class="w-full sm:max-w-md mt-6 px-6 py-3 pt-6 ms-16 bg-white  overflow-hidden sm:rounded-lg ">
                 <div class="logo flex items-center">
                     <div class="logo-svg">
                     </div>
-                    <h1 class="text-[#4E9F3D] text-4xl font-black pb-8">Lumina Health</h1>
+                    <h1 class="text-[#4E9F3D] text-4xl font-black pb-8">Lumina <span class="py-2 px-4 bg-[#4E9F3D] text-white rounded">Health</span></h1>
                 </div>
                 {{ $slot }}
             </div>
