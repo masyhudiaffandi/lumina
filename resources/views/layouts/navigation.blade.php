@@ -8,6 +8,7 @@
                     <a href="{{ route('dashboard') }}">
                         <x-application-logo class="block h-9 w-auto fill-current text-gray-800" />
                     </a>
+                    <h1 class="text-3xl ms-4 text-black font-bold">Lumina</h1>
                 </div>
             </div>
 
