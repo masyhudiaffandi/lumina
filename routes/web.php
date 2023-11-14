@@ -19,8 +19,12 @@ Route::get('/', function () {
 });
 
 Route::get('/dashboard', function () {
-    return view('dashboard');
+    return view('lumina.index');
 })->middleware(['auth', 'verified'])->name('dashboard');
+
+Route::get('/services', function() {
+    return view('lumina.services');
+});
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
