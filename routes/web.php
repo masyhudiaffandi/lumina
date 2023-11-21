@@ -1,7 +1,10 @@
 <?php
 
+use App\Http\Controllers\Lumina\BmiController;
+use App\Http\Controllers\LuminaController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ChatController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,7 +18,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('lumina.index');
 });
 
 Route::get('/dashboard', function () {
@@ -26,6 +29,14 @@ Route::get('/services', function() {
     return view('lumina.services');
 });
 
+Route::get('/chats', function () {
+    return view('lumina.chat');
+});
+
+Route::post('/chat', 'App\Http\Controllers\ChatController');
+
+
+
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
@@ -33,3 +44,9 @@ Route::middleware('auth')->group(function () {
 });
 
 require __DIR__.'/auth.php';
+
+
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+

@@ -7,87 +7,166 @@
     <link rel="stylesheet" href="./css/app.css">
     @vite('resources/css/app.css')
     <title>Document</title>
+    <script src="{{ asset('js/app.js') }}" defer></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Styles -->
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
 <body class="bg-white">
     <x-app-layout></x-app-layout>
     @include('layouts.navigation')
 
-    <header class="flex flex-col justify-center items-center pt-[5.9vw]">
-        <div class="hero min-h-screen" style="background-image: url(assets/img/doctor.png);">
-            <div class="hero-overlay"></div>
-            <div class="hero-content text-center text-neutral-content">
-                <div class="max-w-md">
-                    <h1 class="mb-5 text-6xl font-[900] text-white underline underline-offset-8">Lumina</h1>
-                    <p class="mb-5 text-white">Tempat konsultasi kesehatan secara virtual yang di support oleh ahli-ahli yang berpengalaman</p>
-                    <button class="bg-[#ffffff] text-[#4E9F3D] py-3 px-5 border border-solid border-[#4E9F3D] rounded-md hover:border-white hover:text-white hover:bg-[#4E9F3D] transition-colors">Get Started</button>
+    <header class="h-[28vw] flex items-center justify-center text-slate-800 font-semibold">
+        <div class="features pt-[78vw] md:pt-[4.5vw]">
+            <div class="features-wrapper flex justify-center items-center">
+                <div class="features-list grid grid-cols-3 md:flex items-center gap-y-[6vw]  gap-x-[6vw] md:gap-[5.7vw] text-[3vw] md:text-[1vw]">
+                    <div class="features text-center items-center flex flex-col gap-[0.6vw]" data-aos="fade-up" duration="1000">
+                        <img src="assets/img/health.svg " class="md:w-[5.5vw] w-[12vw] cursor-pointer" alt="">
+                        <a href="#">Lumina Health <br> Monitoring</a>
+                    </div>
+                    <div class="features text-center items-center flex flex-col gap-[0.6vw]" data-aos="fade-up" duration="1500">
+                        <img src="assets/img/coach.svg " class="md:w-[5.5vw] w-[12vw] cursor-pointer" alt="">
+                        <a href="#">Lumina Health <br> Coaching</a>
+                    </div>
+                    <div class="features text-center items-center flex flex-col gap-[0.6vw]" data-aos="fade-up" duration="2000">
+                        <img src="assets/img/food.svg " class="md:w-[5.5vw] w-[12vw] cursor-pointer" alt="">
+                        <a href="#">Lumina Diet <br> Catering </a>
+                    </div>
+                    <div class="features text-center items-center flex flex-col gap-[0.6vw]" data-aos="fade-up" duration="2500">
+                        <img src="assets/img/shop.svg " class="md:w-[5.5vw] w-[12vw] cursor-pointer" alt="">
+                        <a href="#">Lumina Healthy <br> Shop</a>
+                    </div>
+                    <div class="features text-center items-center flex flex-col gap-[0.6vw]" data-aos="fade-up" duration="3000">
+                        <img src="assets/img/chat.svg " class="md:w-[5.5vw] w-[12vw] cursor-pointer" alt="">
+                        <a href="/chats">Lumina  <br> Chat  AI </a>
+                    </div>
+                    <div class="features text-center items-center flex flex-col gap-[0.6vw]" data-aos="fade-up" duration="3500">
+                        <img src="assets/img/more.svg " class="md:w-[5.5vw] w-[12vw] cursor-pointer" alt="">
+                        <a href="#">More Lumina <br> Features </a>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="statistic flex gap-16 bg-white shadow-2xl -mt-[6rem] py-16 px-24 rounded-xl">
-
-            <div class="stat1 flex flex-col items-center text-center justify-center">
-                <h1 class="text-5xl font-bold">256k+</h1>
-                <p>Users</p>
-            </div>
-            
-            <div class="stat2">
-                <h1 class="text-5xl font-bold">10+</h1>
-                <p>Products</p>
-            </div>
-            
-            <div class="stat3">
-                <h1 class="text-5xl font-bold">10+</h1>
-                <p>Categories</p>
-            </div>
-
-            <div class="stat4">
-                <h1 class="text-5xl font-bold">10+</h1>
-                <p>Categories</p>
-            </div>
-            
-            </div>
     </header>
 
-    <main>
-        <div id="about" class="mt-[5vw] text-slate-900 px-24">
-            <div class="about-wrapper">
-                <div class="title text-4xl font-bold">About Us</div>
-                <div class="content mt-4">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam quidem culpa repellat ipsum soluta nam pariatur harum assumenda vel, illo adipisci quasi non recusandae amet, perspiciatis quibusdam, odio qui consequatur. Labore modi excepturi nihil nesciunt, expedita enim cupiditate ullam dolore, culpa voluptate doloremque, nemo quo error ipsam. Culpa deleniti perspiciatis sint ratione architecto nesciunt magni tenetur. Lorem ipsum dolor sit amet consectetur, adipisicing elit. At commodi quis eligendi vitae porro. Soluta modi rem labore officiis aliquam, deleniti iste est facere unde voluptas debitis, quasi sit. Vel id velit molestiae magni? Aperiam quam exercitationem id quasi ex blanditiis unde maiores architecto mollitia fugit. Odio animi repudiandae harum earum similique ea officia qui nihil nostrum beatae. Fuga expedita vero quod officia, assumenda odio.</p>
+    <main class="mt-[60vw] md:mt-0">
+        <div class="achievements mt-[18vw] md:-mt-[2.3vw]" data-aos="flip-up">
+            <div class="achievements-wrapper flex justify-center items-center">
+                <div class="achievements-list hidden md:flex items-center gap-[5.7vw] bg-white shadow-2xl px-[4vw] py-[2vw] rounded-xl" style="box-shadow: 0px 0px 17.9px 0px rgba(0, 0, 0, 0.25);">
+                    <div class="achievements text-center items-center flex flex-col gap-[0vw] text-slate-800">
+                        <h1 class="md:text-[3vw] font-bold" id="countUpNumber1">2567</h1>
+                        <p class="md:text-[1vw]">Total user</p>
+                    </div>
+                    <div class="achievements text-center items-center flex flex-col gap-[0w] text-slate-800">
+                        <h1 class="md:text-[3vw] font-bold" id="countUpNumber2">253</h1>
+                        <p class="md:text-[1vw]">total professional doctor</p>
+                    </div>
+                    <div class="achievements text-center items-center flex flex-col gap-[0vw] text-slate-800">
+                        <h1 class="md:text-[3vw] font-bold" id="countUpNumber3">124</h1>
+                        <p class="md:text-[1vw]">total food supplier</p>
+                    </div>
+                    <div class="achievements text-center items-center flex flex-col gap-[0vw] text-slate-800">
+                        <h1 class="md:text-[3vw] font-bold" id="countUpNumber4">87</h1>
+                        <p class="md:text-[1vw]">total awards</p>
+                    </div>
                 </div>
             </div>
         </div>
+        
 
-        <div class="contact text-slate-900 bg-[#4E9F3D]" id="contact">
-            <div class="contact-wrapper px-24 h-96">
-                <div class="title text-4xl font-bold">Layanan kami</div>
+        <div class="promo md:h-[23vw] h-[38vw] bg-[#91FF7A] -mt-[3vw] md:-mt-[5.1vw] flex  items-center justify-center md:pt-[5vw] px-[6vw] md:px-[10vw] ">
+            <div id="myCarousel" class="promo carousel slide" data-ride="carousel" >
+                <div class="carousel-inner flex gap-[2vw]">
+                    <div class="carousel-item active">
+                        <figure><img src="assets/img/promo.png" class="rounded-xl md:w-[32vw] w-[74vw]" alt=""></figure> 
+                    </div>
+                    <div class="carousel-item">
+                        <figure><img src="assets/img/promo2.png" class="rounded-xl md:w-[32vw] w-[74vw]" alt=""></figure> 
+                    </div>
+                    <div class="carousel-item">
+                        <figure><img src="assets/img/promo3.png" class="rounded-xl md:w-[32vw] w-[74vw]" alt=""></figure>
+                    </div>
+                    <div class="carousel-item">
+                        <figure><img src="assets/img/promo.png" class="rounded-xl md:w-[32vw] w-[74vw]" alt=""></figure>
+                    </div>
+                    <div class="carousel-item">
+                        <figure><img src="assets/img/promo2.png" class="rounded-xl md:w-[32vw] w-[74vw]" alt=""></figure>
+                    </div>
+                    <div class="carousel-item">
+                        <figure><img src="assets/img/promo3.png" class="rounded-xl md:w-[32vw] w-[74vw]" alt=""></figure>
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
             </div>
         </div>
 
-        <div class="contact text-slate-900 px-24" id="contact">
-            <div class="contact-wrapper">
-                <div class="title text-4xl font-bold">Contact Us</div>
+        <div class="shop md:h-[45vw] h-[62vw]">
+            <div class="title md:text-center items-center md:mt-0 mt-[6vw] md:ps-0 ps-[6vw]">
+                <h1 class="md:text-[2.8vw] text-[5.5vw] font-bold text-black md:py-[2vw]">Lumina Healthy Shop</h1>
             </div>
+            <div class="shop-wrapper flex justify-center items-center md:mt-0 mt-[8vw] px-[4vw]">
+                <div class="shop-list flex items-center gap-[5vw] md:gap-[2.7vw] carousel slide" data-ride="carousel" id="myCarousel">
+                    <div class="card card-compact md:w-[23vw] w-[58vw] shadow-xl text-slate-800 carousel-item active">
+                        <figure ><img src="assets/img/medicine.jpg"   alt="Shoes" /></figure>
+                        <div class="card-body bg-[#F4FFF2]">
+                            <h1 class="card-title md:text-[2.4vw]">Obat Anti Mual Lite</h1>
+                            <p class="md:text-[1.3vw]">Rp. 12,000.00</p>
+                            <div class="card-actions justify-end">
+                            <button class="py-[0.6vw] rounded-[0.4vw] px-[1vw] border-none text-white bg-[#57c740] w-full">Buy Now</button>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="card card-compact md:w-[23vw] w-[58vw] shadow-xl text-slate-800 carousel-item">
+                        <figure><img src="assets/img/medicine.jpg" alt="Shoes" /></figure>
+                        <div class="card-body bg-white">
+                            <h1 class="card-title md:text-[2.4vw] line-clamp-4">Tolak Angin Premium</h1>
+                            <p class="md:text-[1.3vw]">Rp. 180,000.00</p>
+                            <div class="card-actions justify-end">
+                            <button class="py-[0.6vw] rounded-[0.4vw] px-[1vw] border-none text-white bg-[#57c740] w-full">Buy Now</button>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="card card-compact md:w-[23vw] w-[58vw] shadow-xl text-slate-800 carousel-item">
+                        <figure><img src="assets/img/medicine.jpg" alt="Shoes" /></figure>
+                        <div class="card-body bg-white">
+                            <h1 class="card-title md:text-[2.4vw]">Obat Penurun Panas</h1>
+                            <p class="md:text-[1.3vw]">Rp. 18,000.00</p>
+                            <div class="card-actions justify-end">
+                            <button class="py-[0.6vw] rounded-[0.4vw] px-[1vw] border-none text-white bg-[#57c740] w-full">Buy Now</button>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         </div>
     </main>
 
-    <footer class="footer footer-center p-10 bg-base-200 text-base-content rounded">
-        <nav class="grid grid-flow-col gap-4">
-            <a class="link link-hover">About us</a>
-            <a class="link link-hover">Contact</a>
-            <a class="link link-hover">Jobs</a>
-            <a class="link link-hover">Press kit</a>
-        </nav> 
-        <nav>
-        <div class="grid grid-flow-col gap-4">
-            <a><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill-current"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"></path></svg></a>
-            <a><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill-current"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"></path></svg></a>
-            <a><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill-current"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"></path></svg></a>
-        </div>
-        </nav> 
-        <aside>
-            <p>Copyright © 2023 - All right reserved by ACME Industries Ltd</p>
-        </aside>
-    </footer>
+    <script>
+        function saveScrollPosition() {
+            sessionStorage.setItem('scrollPosition', window.pageYOffset);
+        }
+
+        function restoreScrollPosition() {
+            if(sessionStorage.getItem('scrollPosition') !== null) {
+            window.scrollTo(0, sessionStorage.getItem('scrollPosition'));
+            sessionStorage.removeItem('scrollPosition');
+        }
+
+        window.addEventListener('beforeunload', saveScrollPosition);
+        window.addEventListener('load', restoreScrollPosition);
+        }
+    </script>
+
+<script src="{{ mix('js/app.js') }}"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </body>
 </html>
