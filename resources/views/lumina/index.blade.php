@@ -21,11 +21,8 @@
 
     <main class="mt-[60vw] md:mt-0">
         @include('layouts.achievements')
-
         @include('layouts.promo')
-
         @include('layouts.shop')
-
     </main>
 
     <script>

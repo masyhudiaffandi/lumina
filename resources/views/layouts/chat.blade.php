@@ -20,15 +20,15 @@
 </head>
 
 <body class="font-sans">
-    <div class="chat h-screen flex flex-col">
+    <div class="chat h-screen flex flex-col bg-[#91FF7A]">
 
         <!-- Header -->
-        <div class="top bg-green-500 p-[0.5vw] text-white flex items-center justify-center">
+        <div class="top  p-[0.5vw] text-white flex items-center justify-center w-full bg-gray-900 rounded-md bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-0 ">
             <img src="/assets/img/logo.svg" alt="Avatar"
                 class="rounded-full w-[4vw] mr-4">
             <h1 class="text-[1.7vw] font-bold">Lumina AI</h1>
         </div>
-        <div class="top bg-red-500 p-[0.1VW] text-white flex items-center text-center justify-center">
+        <div class="disclaimer bg-red-500 p-[0.1VW] text-white flex items-center text-center justify-center">
                 <small class="text-xs">Gunakan AI ini hanya untuk keperluan ILMU PENGETAHUAN, JANGAN DIGUNAKAN UNTUK KONSULTASI KESEHATAN</small>
         </div>
         <!-- End Header -->
@@ -36,7 +36,7 @@
         <!-- Chat -->
         <div class="messages overflow-auto flex-1 p-4 bg-gray-100">
             <div class="left message flex items-center mb-4 border-b-2 pb-[1vw]">
-                <img src="https://assets.edlin.app/images/rossedlin/03/rossedlin-03-100.jpg" alt="Avatar"
+                <img src="/assets/img/logo.svg" alt="Avatar"
                     class="rounded-full w-12 h-12 mr-4">
                 <p class="bg-white p-4 rounded shadow">Start chatting with Lumina Chat AI below!!</p>
             </div>
@@ -82,14 +82,14 @@
     }).done(function (res) {
 
       //Populate sending message
-      $(".messages > .message").last().after('<div class="right message flex items-center my-[4vw] border-b-2 pb-[1vw]">' +
+      $(".messages > .message").last().after('<div class="right message flex items-center my-[4vw] border-b-2 pb-[1vw] w-full justify-end pe-[1vw]">' +
         '<p class="bg-white p-4 rounded shadow">' + $("form #message").val() + '</p>' +
         '<img src="https://assets.edlin.app/images/rossedlin/03/rossedlin-03-100.jpg" class="rounded-full w-12 h-12 ml-4" alt="Avatar">' +
         '</div>');
 
       //Populate receiving message
       $(".messages > .message").last().after('<div class="left message flex items-center my-[4vw] border-b-2 pb-[1vw]">' +
-        '<img src="https://assets.edlin.app/images/rossedlin/03/rossedlin-03-100.jpg" class="rounded-full w-12 h-12 mr-4" alt="Avatar">' +
+        '<img src="/assets/img/logo.svg" class="rounded-full w-12 h-12 mr-4" alt="Avatar">' +
         '<p class="bg-white p-4 rounded shadow">' + res + '</p>' +
         '</div>');
 
