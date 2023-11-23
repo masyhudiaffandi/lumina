@@ -25,9 +25,17 @@ Route::get('/dashboard', function () {
     return view('lumina.index');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
-Route::get('/services', function() {
+Route::get('/services', function () {
     return view('lumina.services');
-});
+})->middleware(['auth', 'verified'])->name('services');
+
+Route::get('/about', function () {
+    return view('lumina.services');
+})->middleware(['auth', 'verified'])->name('about');
+
+Route::get('/contact', function () {
+    return view('lumina.contact');
+})->middleware(['auth', 'verified'])->name('contact');
 
 Route::get('/chats', function () {
     return view('lumina.chat');

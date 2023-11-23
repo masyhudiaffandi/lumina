@@ -23,6 +23,7 @@
         @include('layouts.achievements')
         @include('layouts.promo')
         @include('layouts.shop')
+        @include('layouts.article')
     </main>
 
     <script>

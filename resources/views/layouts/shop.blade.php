@@ -1,9 +1,9 @@
-<div class="shop md:h-[45vw] h-[62vw]">
+<div class="shop md:h-[45vw] h-[62vw] ">
     <div class="title md:text-center items-center md:mt-0 mt-[6vw] md:ps-0 ps-[6vw]">
         <h1 class="md:text-[2.8vw] text-[5.5vw] font-bold text-black md:py-[2vw]">Lumina Healthy Shop</h1>
     </div>
-    <div class="shop-wrapper flex justify-center items-center md:mt-0 mt-[8vw] px-[4vw]">
-        <div class="shop-list flex items-center gap-[5vw] md:gap-[2.7vw] carousel slide" data-ride="carousel" id="myCarousel">
+    <div class="shop-wrapper flex justify-center items-center md:mt-0 mt-[8vw] px-[4vw] pb-[2vw]">
+        <div class="shop-list flex items-center gap-[5vw] md:gap-[2.7vw] carousel slide  md:my-0 my-[5vw] pb-0 md:pb-[6vw]" data-ride="carousel" id="myCarousel">
             <div class="card card-compact md:w-[23vw] w-[58vw] shadow-xl text-slate-800 carousel-item active">
                 <figure ><img src="assets/img/medicine.jpg"   alt="Shoes" /></figure>
                 <div class="card-body bg-[#F4FFF2]">
