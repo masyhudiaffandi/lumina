@@ -1,20 +1,17 @@
-<div class="bg-white p-4 rounded-lg shadow-xs md:mt-0 mt-[42vw]">
-    <div class="text-lg font-semibold mb-4 text-center">Artikel Terbaru</div>
-    <ul class="space-y-4 px-[4vw]">
-        <li class="bg-gray-100 p-4 rounded-lg flex">
-            <img src="assets/img/article.jpg" alt="Gambar Artikel 1" class="w-[18vw] h-[12vw] object-cover rounded-lg mr-4">
-            <div class="flex-1">
-            <div class="text-lg font-semibold mb-2">Judul Artikel 1</div>
-            <p class="text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras id enim sed erat consequat posuere.</p>
+<div class="article-list">
+    <div class="article-wrapper">
+        <div class="article">
+            <div class="image">
+                <img src="/assets/img/article" alt="">
             </div>
-        </li>
-        <li class="bg-gray-100 p-4 rounded-lg flex">
-            <img src="assets/img/article.jpg" alt="Gambar Artikel 2" class="md:w-[18vw] md:h-[12vw] object-cover rounded-lg mr-4">
-            <div class="flex-1">
-            <div class="text-lg font-semibold mb-2">Judul Artikel 2</div>
-            <p class="text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras id enim sed erat consequat posuere.</p>
+            <div class="content">
+                <div class="title">
+                    <h1>Judul Artikel</h1>
+                </div>
+                <div class="desc">
+                    <p></p>
+                </div>
             </div>
-        </li>
-        <!-- Tambahkan item list article lainnya disini -->
-    </ul>
+        </div>
+    </div>
 </div>

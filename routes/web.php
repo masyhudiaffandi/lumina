@@ -3,8 +3,10 @@
 use App\Http\Controllers\Lumina\BmiController;
 use App\Http\Controllers\LuminaController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\ProductController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ChatController;
+use App\Models\Product;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,6 +22,8 @@ use App\Http\Controllers\ChatController;
 Route::get('/', function () {
     return view('lumina.index');
 });
+
+// Route::get('/', [ProductController::class, 'index'])->name('shop');
 
 Route::get('/dashboard', function () {
     return view('lumina.index');
@@ -40,6 +44,15 @@ Route::get('/contact', function () {
 Route::get('/chats', function () {
     return view('lumina.chat');
 });
+
+Route::get('/product', function() {
+    return view('product.create');
+});
+
+
+Route::resource('product', ProductController::class);
+
+
 
 Route::post('/chat', 'App\Http\Controllers\ChatController');
 
