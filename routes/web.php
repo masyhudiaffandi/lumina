@@ -19,9 +19,12 @@ use App\Models\Product;
 |
 */
 
-Route::get('/', function () {
-    return view('lumina.index');
-});
+// Route::get('/', function () {
+//     return view('lumina.index');
+// });
+Route::get('/', [luminaController::class, 'index'])->name('lumina.index');
+
+
 
 // Route::get('/', [ProductController::class, 'index'])->name('shop');
 
@@ -48,6 +51,7 @@ Route::get('/chats', function () {
 Route::get('/product', function() {
     return view('product.create');
 });
+
 
 
 Route::resource('product', ProductController::class);

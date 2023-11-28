@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\Models\Product;
+
 class luminaController extends Controller
 {
     /**
@@ -11,8 +13,11 @@ class luminaController extends Controller
      */
     public function index()
     {
-        return view('lumina.index');
+        $products =Product::all()->sortByDesc('created_at');     
+        return view('lumina.index', compact('products'));
     }
+    
+    
 
     /**
      * Show the form for creating a new resource.

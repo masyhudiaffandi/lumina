@@ -43,7 +43,8 @@ class ProductController extends Controller
             'photo' => $photo,
         ]);
 
-        return to_route('lumina.index');
+        return redirect()->route('lumina.index');
+
     }
 
     /**

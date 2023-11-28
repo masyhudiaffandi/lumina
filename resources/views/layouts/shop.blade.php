@@ -1,22 +1,25 @@
-<div class="shop md:h-[45vw] h-[62vw] md:mt-[3vw]">
-    <div class="title md:text-center items-center md:mt-0 my-[3vw] md:ps-0 ps-[6vw]">
-        <h1 class="md:text-[2.8vw] text-[5.5vw] font-bold text-black md:py-[2vw]">Lumina Healthy Shop</h1>
+<div class="mt-8 px-[8vw]">
+    <div class="title flex md:justify-center">
+        <h1 class="font-semibold md:mb-[1vw] mb-[8vw] md:text-center  md:text-[2.8vw] text-[5.5vw] md:py-[1vw] md:px-[3vw] text-[#242424]" >Lumina Healthy <span class="py-2 px-4 bg-[#4E9F3D] text-white rounded" data-aos="fade-up">Shop</span></h1>
     </div>
-    <div class="shop-wrapper flex justify-center items-center md:mt-0 mt-[8vw] px-[4vw] pb-[2vw]">
-        <div class="shop-list flex items-center gap-[5vw] md:gap-[2.7vw] carousel slide  md:my-0 my-[5vw] pb-0 md:pb-[6vw]" data-ride="carousel" id="myCarousel">
-            @foreach ($products as $product)
-            <div class="card card-compact md:w-[23vw] w-[58vw] shadow-xl text-slate-800 carousel-item" data-aos="fade-up">
-                <figure><img class="product-img" src="{{ asset('storage/' . $product->photo) }}" alt="Shoes" /></figure>
-                <div class="card-body bg-white">
-                    <h1 class="title card-title md:text-[2.4vw]">{{ $product->name }}</h1>
-                    <p class="price md:text-[1.3vw]">Rp. {{  $product->price  }}</p>
-                    <div class="card-actions justify-end">
-                    <button class="py-[0.6vw] rounded-[0.4vw] px-[1vw] border-none text-white bg-[#57c740] w-full">Buy Now</button>
+
+    <div class="carousel flex justify-center gap-8" >
+        @foreach ($products as $product)
+            <div class="carousel-item flex-1 flex flex-col md:flex rounded overflow-hidden shadow-lg max-w-[20rem] min-w-[15rem]" style="box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);" data-aos="fade-up">
+                <img class="w-full h-[20vw] object-cover" src="{{ asset('storage/'. $product->photo ) }}" alt="Product" >
+                <div class="px-4 py-1 flex-1">
+                    <div class="font-bold md:text-[2vw] text-[3.8vw]" >{{ $product->name }}</div>
+                    <div class="tag">
+                        <span class="inline-block bg-gray-200 rounded-full px-3 py-1 md:text-sm text-[2vw] font-semibold text-gray-700 mr-2" data-aos="fade-up">Category: Medicine</span>
+                    </div>
                 </div>
+                <div class="px-4 mt-[1.2vw]" >
+                    <p class="inline_block text-gray-700 md:text-[1.5vw] text-[3vw]">Rp. {{ $product->price }}</p>
+                </div>
+                <div class="card-actions flex px-4 pb-4 mt-[0.67vw]" >
+                    <button class="py-2 md:py-[0.8vw] w-full md:text-sm text-lg text-[3vw] bg-[#4E9F3D] text-white rounded-md hover:bg-green-700 transition duration-300 ease-in-out" >Beli</button>
                 </div>
             </div>
-            @endforeach
-        </div>
+        @endforeach
     </div>
-</div>
 </div>
