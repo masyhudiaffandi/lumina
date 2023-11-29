@@ -54,8 +54,16 @@ Route::get('/product', function() {
 
 
 
-Route::resource('product', ProductController::class);
 
+
+Route::middleware(['auth', 'admin'])->group(function () {
+    Route::resource('product', ProductController::class);
+});
+
+Route::middleware(['auth', 'admin'])->group(function () {
+    Route::view('product/create', 'product.create');
+    // ... tambahkan rute atau resource lainnya di sini
+});
 
 
 Route::post('/chat', 'App\Http\Controllers\ChatController');
