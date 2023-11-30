@@ -78,4 +78,10 @@ class ProductController extends Controller
     {
         //
     }
+
+    public function checkout()
+    {
+        $product = session('selectedProduct');
+        return view('checkout', compact('product'));
+    }
 }

@@ -14,7 +14,7 @@ class luminaController extends Controller
     public function index()
     {
         $products =Product::all()->sortByDesc('created_at');     
-        return view('lumina.index', compact('products'));
+        return view('auth.login', compact('products'));
     }
     
     

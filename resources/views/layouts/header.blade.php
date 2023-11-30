@@ -12,7 +12,7 @@
                 </div>
                 <div class="features text-center items-center flex flex-col gap-[0.6vw]" data-aos="fade-up" duration="2000">
                     <img src="assets/img/food.svg " class="md:w-[5.5vw] w-[14vw] cursor-pointer" alt="">
-                    <a href="#">Lumina Diet <br> Catering </a>
+                    <a href="/diet">Lumina Diet <br> Catering </a>
                 </div>
                 <div class="features text-center items-center flex flex-col gap-[0.6vw]" data-aos="fade-up" duration="2500">
                     <img src="assets/img/shop.svg " class="md:w-[5.5vw] w-[14vw] cursor-pointer" alt="">

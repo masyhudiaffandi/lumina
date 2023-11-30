@@ -4,9 +4,6 @@
             <a href="{{ route('product.create') }}" class="btn btn-primary">Create</a>
         </div>
         <div class="shop-list flex items-center gap-[5vw] md:gap-[2.7vw] carousel slide  md:my-0 my-[5vw] pb-0 md:pb-[6vw]" data-ride="carousel" id="myCarousel">
-
-
-
         </div>
     </div>
 </div>

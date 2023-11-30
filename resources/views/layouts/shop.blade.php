@@ -6,7 +6,8 @@
     <div class="carousel flex justify-center gap-8" >
         @foreach ($products as $product)
             <div class="carousel-item flex-1 flex flex-col md:flex rounded overflow-hidden shadow-lg max-w-[20rem] min-w-[15rem]" style="box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);" data-aos="fade-up">
-                <img class="w-full h-[20vw] object-cover" src="{{ asset('storage/'. $product->photo ) }}" alt="Product" >
+                {{-- <img class="w-full h-[20vw] object-cover" src="{{ asset('storage/'. $product->photo ) }}" alt="Product" >
+                --}}
                 <div class="px-4 py-1 flex-1">
                     <div class="font-bold md:text-[2vw] text-[3.8vw]" >{{ $product->name }}</div>
                     <div class="tag">
@@ -17,7 +18,11 @@
                     <p class="inline_block text-gray-700 md:text-[1.5vw] text-[3vw]">Rp. {{ $product->price }}</p>
                 </div>
                 <div class="card-actions flex px-4 pb-4 mt-[0.67vw]" >
-                    <button class="py-2 md:py-[0.8vw] w-full md:text-sm text-lg text-[3vw] bg-[#4E9F3D] text-white rounded-md hover:bg-green-700 transition duration-300 ease-in-out" >Beli</button>
+                    <form action="{{ route('checkout') }}" method="post">
+                        @csrf
+                        <input type="hidden" name="product" value="{{ $product->id }}">
+                        <button type="submit" class="py-2 md:py-[0.8vw] px-[3vw] w-full md:text-sm text-lg text-[3vw] bg-[#4E9F3D] text-white rounded-md hover:bg-green-700 transition duration-300 ease-in-out">Beli</button>
+                    </form>
                 </div>
             </div>
         @endforeach

@@ -22,7 +22,7 @@
                 </div>
                 {{ $slot }}
             </div>
-            <div class="detel">
+            <div class="detel md:block hidden">
                 <img src="assets/img/detel.svg" alt="" srcset="" width="488vw" class="me-[11vw]">
             </div>
         </div>
